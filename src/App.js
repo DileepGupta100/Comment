@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import CommentBox from "./CommentBox";
 import useComments from "./useComments";
+import "./local-comp";
 
 const App = ({ articleId = "mainArticle" }) => {
   const content = (
@@ -46,6 +47,7 @@ const App = ({ articleId = "mainArticle" }) => {
         allComments={allComments}
         createComment={createComment}
       />
+      <created-by post="by Dileep"></created-by>
     </div>
   );
 };

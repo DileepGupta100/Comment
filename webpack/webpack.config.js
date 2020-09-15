@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.js",
+  entry: "./src/webComment.js",
   output: {
     path: path.resolve(__dirname, "../dist"),
     filename: "bundle.js"
@@ -18,7 +18,7 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/env","@babel/preset-react"]
+            presets: ["@babel/env", "@babel/preset-react"]
           }
         }
       },
