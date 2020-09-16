@@ -54,8 +54,9 @@ import React, { useState } from "react";
 
 
 import {  Button } from "antd";
-const App = ()=>{
-  return <><Button onClick={()=>alert("add ur note")}>Add Note</Button>
+const App = (props)=>{
+  
+return <><Button onClick={()=>alert("add ur note")}>Add Note {props.prop1}</Button>
    <Button onClick={()=>alert("add flashcard")}>Add FlashCard</Button></>
 }
 
