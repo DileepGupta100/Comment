@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // import CommentBox from "./CommentBox";
 // import useComments from "./useComments";
@@ -53,9 +53,16 @@ import React, { useState } from "react";
 // };
 
 
+
 import {  Button } from "antd";
+function abc () { alert("got it build")}
+
 const App = (props)=>{
-  
+
+  useEffect(()=>{
+  document.addEventListener('build',abc , false);
+  return  ()=>{  alert("removed build") ; document.removeEventListener('build', abc);}
+  },[])
 return <><Button onClick={()=>alert("add ur note")}>Add Note {props.prop1}</Button>
    <Button onClick={()=>alert("add flashcard")}>Add FlashCard</Button></>
 }
